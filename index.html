@@ -2,24 +2,35 @@
     <head>
         <title> Reward to Carina </title>
         <script>
+           var FILE = '1.jpg';
+
            function openImage() {
-           open('1.jpg');
+               open(FILE);
+           }
+
+           // 當任何一個按鈕被點擊時，禁用所有按鈕的函數
+           function disableAllButtons() {
+               // 獲取所有按鈕元素
+               var buttons = document.getElementsByTagName('input');
+               // 遍歷並禁用每個按鈕
+               for (var i = 0; i < buttons.length; i++) {
+                   buttons[i].disabled = true;
+               }
            }
         </script>
     </head>
-    </script>
     <body>
 
-        <h1 style="color:blueviolet">Please select a button below, and you may get a reward !</h1>
+        <h1 style="color:blueviolet">Please select a button below, and you may get a reward!</h1>
 
-        &emsp;&emsp;<input type="button" value="😂" onclick="location.href='https://anson-0106.github.io/Error/'" style="width:60px;height:40px;font-size:25px;">
-        &emsp;<input type="button" value="🤣" onclick="location.href='https://anson-0106.github.io/Error/'" style="width:60px;height:40px;font-size:25px;">
-        &emsp;<input type="button" value="😭" onclick="location.href='https://anson-0106.github.io/Error/'" style="width:60px;height:40px;font-size:25px;">
+        &emsp;&emsp;<input type="button" value="😂" <input type="button" value="😂" onclick="window.open('https://anson-0106.github.io/Error/'); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
+        &emsp;<input type="button" value="😂" <input type="button" value="🤣" onclick="window.open('https://anson-0106.github.io/Error/'); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
+        &emsp;<input type="button" value="😭" onclick="window.open('https://anson-0106.github.io/Error/'); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
         <br>
         <br>
-        &emsp;&emsp;<input type="button" value="🥹" onclick="location.href='https://anson-0106.github.io/Error/'" style="width:60px;height:40px;font-size:25px;">
-        &emsp;<input type="button" value="😜" onclick="location.href='https://anson-0106.github.io/Error/'" style="width:60px;height:40px;font-size:25px;">
-        &emsp;<input type="button" value="🙃" onclick="openImage()" style="width:60px;height:40px;font-size:25px;">
+        &emsp;&emsp;<input type="button" value="🥹" onclick="window.open('https://anson-0106.github.io/Error/'); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
+        &emsp;<input type="button" value="😜" onclick="window.open('https://anson-0106.github.io/Error/'); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
+        &emsp;<input type="button" value="🙃" onclick="openImage(); disableAllButtons();" style="width:60px;height:40px;font-size:25px;">
 
     </body>
 </html>
